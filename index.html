@@ -18,25 +18,49 @@
                         <input type="text" id="score">
                     </p>
                         <button class ="submit" onclick="submit()">
-                         Submit
+                        Submit
+                        </button>
+                        <br>
+                        <button class ="save" onclick="save()">
+                        Save
+                        </button>
+                        <br>
+                        <button class ="load" onclick="load()">
+                        Load
                         </button>
                 </div>
 
-                <button id="points" onclick="add()">
-                click me
+                <button  id="points" onclick="add()">
+                    <img id="tree" src="./assets/clip art/tree.png" alt="Big clicking tree">
                 </button>
 
                 <div class ="updgrades">
                     <p class ="updgrade Inventory"> Upgrades: </p>
-            
+                    <br>
+                   
 
                 </div>
-
+                
                 <div class ="shop">
                     <p class="Store Inventory"> STORE: </p>
 
-                </div>
+                        <button onclick="buyLumberjack()" id="shopitem"> <img class="worker" class="lumberjack" src="./assets/clip art/lumberjack.png" alt="lumberjack"> LumberJack </button>
+                        <button onclick="buyIronAxe()" id="shopitem"> <img class="Axe" class="iron" src="./assets/clip art/iron axe.png" alt="iron axe "> Iron Axe</button>
+                        <button onclick="buyStoneAxe()" id="shopitem"> <img class="Axe" class="stone" src="./assets/clip art/stone axe.png" alt="stone axe "> Stone Axe </button>
+                        <button onclick="buyDoubleAxe()" id="shopitem"> <img class="Axe" class="doubleiron" src="./assets/clip art/doublesided iron axe..png" alt="double iron axe "> Double Iron Axe</button>
+                        <button onclick="buyGoldAxe()" id="shopitem"> <img class="Axe" class="gold" src="./assets/clip art/gold axe.png" alt=" gold axe "> Gold Axe</button>
+                        <button onclick="buyHolyAxe()" id="shopitem"> <img class="Axe" class="holy" src="./assets/clip art/holy axe.png" alt=" holy axe "> Holy Axe</button>
+                        <button onclick="buyPaulAxe()" id="shopitem"> <img class="Axe" class="bunyon" src="./assets/clip art/Paul Bunyon.png" alt="best axe ">Paul Bunyon's Axe </button>
+                        <button onclick="buyHouse()" id="shopitem"> <img class="building" class="house" src="./assets/clip art/house (2).png" alt="house "> house</button>
+                        <button onclick="buyFarm()" id="shopitem"> <img class="building" class="farm" src="./assets/clip art/farm (2).png" alt="farm"> farm</button>
+                        <button onclick="buyBlacksmith()" id="shopitem"> <img class="building" class="blacksmith" src="./assets/clip art/blacksmith.png" alt="blacksmith"> blacksmith </button>
+                        <button onclick="buySawmill()" id="shopitem"> <img class="building" class="sawmill" src="./assets/clip art/sawmill (2).png" alt="sawmill"> sawmill</button>
+                        <button onclick="buyWizard()" id="shopitem"> <img class="building" class="wizard" src="./assets/clip art/wizard tower.png" alt="wizard tower"> wizard tower</button>
+                        
 
+
+                </div>
+                
 
             </div>
         </main>  

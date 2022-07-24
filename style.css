@@ -1,14 +1,21 @@
+body{
+    background: url('./assets/Minifantasy_ForgottenPlains_v3.5_Free_Version/Minifantasy_ForgottenPlains_Assets/Minifantasy_ForgottenPlainsMockup.png') no-repeat fixed; 
+    background-size: cover ; 
+    
+}
 .scoreboard{
     margin: 10px;
     width: 20%;
-    height: 100px;
+    height: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     border: 2px Solid black;
     background-color: transparent;
-    color:white     
+    color:white;
+    position: relative;
+    left: 500px; 
     
 }
 
@@ -21,14 +28,43 @@
     align-items: center;
     justify-content: space-evenly;
     border: 2px Solid black;
-    background-color: white;
-    opacity: 0.5;
+    background-color: transparent;
     position: fixed;
     bottom: 0;
+    color: white;
+}
+
+
+#shopitem{
+    background-color: transparent;
+    color: white;
+}
+
+#points{
+    /* border: none; */
+    background-color: transparent;
+    position: absolute;
+    left: 35%;
+    top: -30%;
+    height: 100px;
+    width: 100px;
+    color: white;
     
+}  
+#tree{
+   transform: scale(.5);
 }
- 
-body{
-    background-image: url('./Minifantasy_ForgottenPlains_v3.5_Free_Version/Minifantasy_ForgottenPlains_Assets/Minifantasy_ForgottenPlainsMockup.png');
-    background-size: contain;
+
+.building{
+    height: 50px;
+    width: 50px;
 }
+.Axe{
+    height: 50px;
+    width: 50px;
+}
+.worker{
+    height: 50px;
+    width: 50px;
+}
+
