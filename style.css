@@ -1,8 +1,8 @@
-body{
-    background: url('./assets/Minifantasy_ForgottenPlains_v3.5_Free_Version/Minifantasy_ForgottenPlains_Assets/Minifantasy_ForgottenPlainsMockup.png') no-repeat fixed; 
-    background-size: cover ; 
-    
+body {
+    height: 100%;
+    width: 100%;
 }
+
 .scoreboard{
     margin: 10px;
     width: 20%;
@@ -51,6 +51,13 @@ body{
     color: white;
     
 }  
+
+.upgrades{
+    display: flex;
+    flex-direction: column;
+
+}
+
 #tree{
    transform: scale(.5);
 }

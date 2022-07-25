@@ -1,5 +1,6 @@
 let score = 0;
 let autoClick = 0;
+let perClick = 1;
 // let clicksPerSecond 
 
 function update(){
@@ -14,7 +15,7 @@ function timer(){
 setInterval(timer,1000)
 
 function add(){
-    score = score + 1
+    score = score + perClick
     update()    
 }
 
@@ -38,29 +39,42 @@ function buyLumberjack(){
 
 function buyIronAxe(){
     if(score >= 100){
-        score = score + 2;
-        update();
-        
+        perClick = 2;
+        update();        
     }
-    
 }
+
 function buyStoneAxe(){
     if(score >= 1000){
-        score = score + 5;
+        perClick = 5;
         update();
     }
 }
+
 function buyDoubleAxe(){
-    
+    if(score >= 10000){
+        perClick = 10;
+        update();
+    }
 }
+
 function buyGoldAxe(){
-    
+    if(score >= 100000){
+        perClick = 50;
+        update();
+    }
 }
 function buyHolyAxe(){
-    
+    if(score >= 500000){
+       perClick = 100;
+        update();
+    }
 }
 function buyPaulAxe(){
-    
+    if(score >= 10000000){
+        perClick = 1000;
+        update();
+    }
 }
 function buyHouse(){
         
