@@ -1,6 +1,5 @@
-body {
-    height: 100%;
-    width: 100%;
+body{
+    background: url('./assets/Minifantasy_ForgottenPlains_v3.5_Free_Version/Minifantasy_ForgottenPlains_Assets/Minifantasy_ForgottenPlainsMockup.jpg') no-repeat fixed center;
 }
 
 .scoreboard{
@@ -15,14 +14,14 @@ body {
     background-color: transparent;
     color:white;
     position: relative;
-    left: 500px; 
+        
     
 }
 
 .shop{
     margin: auto;
-    width: 100%;
-    height: 100px;
+    width: 90%;
+    height: 7%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -55,11 +54,16 @@ body {
 .upgrades{
     display: flex;
     flex-direction: column;
+    border: 1px solid black;
+    width: 10%;
+    position: absolute;
+    left: 0;
 
 }
 
 #tree{
-   transform: scale(.5);
+    transform: scale(.3);
+    margin-top: -100px;
 }
 
 .building{
