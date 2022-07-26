@@ -3,29 +3,39 @@ let autoClick = 0;
 let perClick = 1;
 // let clicksPerSecond 
 
+//update scoreboard every second
 function update(){
     document.getElementById("score").value= score;
 }
 function timer(){
     score = score + autoClick;
     update()
-
 }
 
 setInterval(timer,1000)
 
+
+//main score function
 function add(){
     score = score + perClick
     update()    
 }
 
+//save button
 function save(){
     localStorage.setItem("score", score);
 }
+//load button
 function load(){
     score = localStorage.getItem("score");
     score = parseInt(score);
     update()
+}
+
+
+//hide buttons after clicking 
+function hideButton(x){
+    x.style.display = 'none';
 }
 
 function buyLumberjack(){
@@ -40,12 +50,10 @@ function buyLumberjack(){
 function buyIronAxe(){
     if(score >= 100){
         perClick = 2;
-        score = score - 100
+        score = score - 100;
         update();   
-         
     }
 }
-
 
 function buyStoneAxe(){
     if(score >= 1000){
