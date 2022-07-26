@@ -1,6 +1,12 @@
 let score = 0;
 let autoClick = 0;
 let perClick = 1;
+let lumberJacksOwn = 0;
+let houseOwn = 0;
+let farmOwn = 0;
+let blacksmithOwn = 0;
+let sawmillOwn = 0;
+let wizardTowerOwn = 0;
 // let clicksPerSecond 
 
 //update scoreboard every second
@@ -24,11 +30,30 @@ function add(){
 //save button
 function save(){
     localStorage.setItem("score", score);
+    localStorage.setItem("lumberJackAmount", lumberJacksOwn);
+    localStorage.setItem("houseAmount", houseOwn);
+    localStorage.setItem("farmAmount", farmOwn);
+    localStorage.setItem("blacksmithAmount", blacksmithOwn);
+    localStorage.setItem("sawmillAmount", sawmillOwn);
+    localStorage.setItem("wizardTowerAmount", wizardTowerOwn);
+  
 }
 //load button
 function load(){
     score = localStorage.getItem("score");
     score = parseInt(score);
+    lumberJacksOwn = localStorage.getItem("lumberJackAmount");
+    lumberJacksOwn = parseInt(lumberJacksOwn);
+    houseOwn = localStorage.getItem("houseAmount");
+    houseOwn = parseInt(houseOwn);
+    farmOwn = localStorage.getItem("farmAmount");
+    farmOwn = parseInt(farmOwn);
+    blacksmithOwn = localStorage.getItem("blacksmithAmount");
+    blacksmithOwn = parseInt(blacksmithOwn);
+    sawmillOwn = localStorage.getItem("sawmillAmount");
+    sawmillOwn = parseInt(sawmillOwn);
+    wizardTowerOwn = localStorage.getItem("wizardTowerAmount");
+    wizardTowerOwn = parseInt(wizardTowerOwn);
     update()
 }
 
