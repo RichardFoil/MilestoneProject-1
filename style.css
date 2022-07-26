@@ -3,17 +3,17 @@ body{
 }
 
 .scoreboard{
-    margin: 10px;
-    width: 20%;
-    height: 5%;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     border: 2px Solid black;
-    background-color: transparent;
-    color:white;
-    position: relative;
+    background-color: white;
+    position: fixed;
+    right: 0;
+    opacity: .8;
+
         
     
 }

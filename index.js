@@ -33,7 +33,7 @@ function load(){
 }
 
 
-//hide buttons after clicking 
+//hide buttons after clicking code from https://www.howtocodeschool.com/2021/10/javascript-hide-button-after-click.html
 function hideButton(x){
     x.style.display = 'none';
 }
