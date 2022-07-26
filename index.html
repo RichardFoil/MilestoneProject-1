@@ -36,22 +36,26 @@
                 <div class ="upgrades">
                     <p> Upgrades: </p>
                     <br>
-                    <p class ="upgradeInventory" id="ironAxeUpgrade"><img class="Axe"  src="./assets/clip art/iron axe.png" alt="iron axe "> Clicks Worth 2 </p>
-
+                    <p class ="upgradeInventory" id="ironAxeUpgrade"><img class="Axe"  src="./assets/clip art/iron axe.png" alt="iron axe ">  Iron Axe: <br> Clicks Worth 10 </p>
+                    <p class ="upgradeInventory" id="stoneAxeUpgrade"><img class="Axe" src="./assets/clip art/stone axe.png" alt="stone axe "> Stone Axe: <br> Clicks Worth 50 </p>
+                    <p class ="upgradeInventory" id="doubleAxeUpgrade"><img class="Axe" src="./assets/clip art/doublesided iron axe..png" alt="double iron axe "> Double Iron Axe: <br> Clicks Worth 100</p>
+                    <p class ="upgradeInventory" id="goldAxeUpgrade"><img class="Axe"  src="./assets/clip art/gold axe.png" alt=" gold axe "> Gold Axe: <br> Clicks Worth 500 </p>
+                    <p class ="upgradeInventory" id="holyAxeUpgrade"><img class="Axe" src="./assets/clip art/holy axe.png" alt=" holy axe "> Holy Axe: <br> Clicks Worth 1000 </p>
+                    <p class ="upgradeInventory" id="paulAxeUpgrade"><img class="Axe" src="./assets/clip art/Paul Bunyon.png" alt="best axe ">The Legendary Paul Bunyon's Axe: <br> Clicks Worth 10000 </p>
                    
 
                 </div>
                 
                 <div id ="shop">
-                    <p class="Store Inventory"> STORE: </p>
+                    <p class="Store Inventory"> <br>STORE: </p>
 
                         <button onclick="buyLumberjack()" class="shopitem"> <img class="worker" class="lumberjack" src="./assets/clip art/lumberjack.png" alt="lumberjack"> LumberJack </button>
-                        <button onclick="buyIronAxe(); hideButton(this); showIronAxe()" id="ironAxeButtonShop" class="shopitem"> <img class="Axe" class="iron" src="./assets/clip art/iron axe.png" alt="iron axe "> Iron Axe</button>
-                        <button onclick="buyStoneAxe(); hideButton(this)"  id="stoneAxeButtonShop" class="shopitem"> <img class="Axe" class="stone" src="./assets/clip art/stone axe.png" alt="stone axe "> Stone Axe </button>
-                        <button onclick="buyDoubleAxe(); hideButton(this)" id="doubleAxeButtonShop" class="shopitem"> <img class="Axe" class="doubleiron" src="./assets/clip art/doublesided iron axe..png" alt="double iron axe "> Double Iron Axe</button>
-                        <button onclick="buyGoldAxe(); hideButton(this)" id="goldAxeButtonShop" class="shopitem"> <img class="Axe" class="gold" src="./assets/clip art/gold axe.png" alt=" gold axe "> Gold Axe</button>
-                        <button onclick="buyHolyAxe(); hideButton(this)" id="holyAxeButtonShop" class="shopitem"> <img class="Axe" class="holy" src="./assets/clip art/holy axe.png" alt=" holy axe "> Holy Axe</button>
-                        <button onclick="buyPaulAxe(); hideButton(this)" id="paulAxeButtonShop" class="shopitem"> <img class="Axe" class="bunyon" src="./assets/clip art/Paul Bunyon.png" alt="best axe ">Paul Bunyon's Axe </button>
+                        <button onclick="buyIronAxe(); hideButton(this); showIronAxe()" id="ironAxeButtonShop" class="shopitem"> <img class="Axe" class="iron" src="./assets/clip art/iron axe.png" alt="iron axe "> Iron Axe <br> Cost: 100</button>
+                        <button onclick="buyStoneAxe(); hideButton(this); replaceIronAxe()"  id="stoneAxeButtonShop" class="shopitem"> <img class="Axe" class="stone" src="./assets/clip art/stone axe.png" alt="stone axe "> Stone Axe <br> Cost: 1000 </button>
+                        <button onclick="buyDoubleAxe(); hideButton(this); replaceStoneAxe()" id="doubleAxeButtonShop" class="shopitem"> <img class="Axe" class="doubleiron" src="./assets/clip art/doublesided iron axe..png" alt="double iron axe "> Double Iron Axe <br> Cost: 10000</button>
+                        <button onclick="buyGoldAxe(); hideButton(this); replaceDoubleAxe() " id="goldAxeButtonShop" class="shopitem"> <img class="Axe" class="gold" src="./assets/clip art/gold axe.png" alt=" gold axe "> Gold Axe <br> Cost: 100000 </button>
+                        <button onclick="buyHolyAxe(); hideButton(this); replaceGoldAxe()" id="holyAxeButtonShop" class="shopitem"> <img class="Axe" class="holy" src="./assets/clip art/holy axe.png" alt=" holy axe "> Holy Axe <br> Cost: 500000 </button>
+                        <button onclick="buyPaulAxe(); hideButton(this); replaceHolyAxe()" id="paulAxeButtonShop" class="shopitem"> <img class="Axe" class="bunyon" src="./assets/clip art/Paul Bunyon.png" alt="best axe ">Paul Bunyon's Axe <br> Cost: 10000000 </button>
                         <button onclick="buyHouse()" class="shopitem"> <img class="building" class="house" src="./assets/clip art/house (2).png" alt="house "> house</button>
                         <button onclick="buyFarm()"  class="shopitem"> <img class="building" class="farm" src="./assets/clip art/farm (2).png" alt="farm"> farm</button>
                         <button onclick="buyBlacksmith()" class="shopitem"> <img class="building" class="blacksmith" src="./assets/clip art/blacksmith.png" alt="blacksmith"> blacksmith </button>

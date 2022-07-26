@@ -55,7 +55,7 @@ body{
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    width: 15%;
+    width: 10%;
     position: absolute;
     left: 0;
     color: white;

@@ -37,16 +37,40 @@ function load(){
 function hideButton(x){
     x.style.display = 'none';
 }
-
-//show upgrades in store
+ 
+//show upgrades in store and replace old Axes
 function showIronAxe(){
     let ironAxe = document.getElementById('ironAxeUpgrade')
     ironAxe.style.display = 'block';
 }
+function replaceIronAxe(){
+    let ironAxe = document.getElementById('ironAxeUpgrade')
+    ironAxe.style.display = 'none';
+    let stoneAxe = document.getElementById('stoneAxeUpgrade')
+    stoneAxe.style.display = 'block';
+}
+function replaceStoneAxe(){
+    let stoneAxe = document.getElementById('stoneAxeUpgrade')
+    stoneAxe.style.display = 'none';
+    let doubleAxe = document.getElementById('doubleAxeUpgrade')
+    doubleAxe.style.display = 'block';
+}
+function replaceDoubleAxe(){
+    let doubleAxe = document.getElementById('doubleAxeUpgrade')
+    doubleAxe.style.display = 'none';
+    let goldAxe = document.getElementById('goldAxeUpgrade')
+    goldAxe.style.display = 'block';
+}
+function replaceGoldAxe(){
+    let goldAxe = document.getElementById('goldAxeUpgrade')
+    goldAxe.style.display = 'none';
+    let holyAxe = document.getElementById('holyAxeUpgrade')
+    holyAxe.style.display = 'block';
+}
 
 function buyLumberjack(){
-    if(score >= ((autoClick+1)^8)){
-        score = score - ((autoClick+1)^8);
+    if(score >= ((autoClick+1)*10)){
+        score = score - ((autoClick+1)*10);
         autoClick = autoClick + 1;
         update()
     
@@ -55,7 +79,7 @@ function buyLumberjack(){
 
 function buyIronAxe(){
     if(score >= 100){
-        perClick = 2;
+        perClick = 10;
         score = score - 100;
         update();   
     }
