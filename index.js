@@ -45,11 +45,7 @@ function buyIronAxe(){
          
     }
 }
-function removeIron() {
-    var elem = document.getElementsByClassName('iron');
-    elem.parentNode.removeChild(elem);
-    return false;
-}
+
 
 function buyStoneAxe(){
     if(score >= 1000){
