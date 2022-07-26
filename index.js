@@ -57,7 +57,7 @@ function buyIronAxe(){
 
 function buyStoneAxe(){
     if(score >= 1000){
-        perClick = 5;
+        perClick = 50;
         score = score - 1000
         update();
     }
@@ -65,7 +65,7 @@ function buyStoneAxe(){
 
 function buyDoubleAxe(){
     if(score >= 10000){
-        perClick = 10;
+        perClick = 100;
         score = score - 10000
         update();
     }
@@ -73,21 +73,21 @@ function buyDoubleAxe(){
 
 function buyGoldAxe(){
     if(score >= 100000){
-        perClick = 50;
+        perClick = 500;
         score = score - 100000
         update();
     }
 }
 function buyHolyAxe(){
     if(score >= 500000){
-       perClick = 100;
+       perClick = 1000;
        score = score - 500000
         update();
     }
 }
 function buyPaulAxe(){
     if(score >= 10000000){
-        perClick = 1000;
+        perClick = 10000;
         score = score - 10000000
         update();
     }
