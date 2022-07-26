@@ -9,9 +9,10 @@ body{
     align-items: center;
     justify-content: space-evenly;
     border: 2px Solid black;
-    background-color: white;
     position: fixed;
     right: 0;
+    top: 0;
+    background-color: white;
     opacity: .8;
 
         
@@ -31,14 +32,16 @@ body{
     position: fixed;
     bottom: 0;
     color: white;
+    
 }
 
 
 .shopitem{
-    background-color: transparent;
-    color: white;
+    background-color: white;
+    opacity: .8;
+    
 }
-
+/* big ass tree*/
 #points{
     /* border: none; */
     background-color: transparent;
@@ -58,7 +61,10 @@ body{
     width: 10%;
     position: absolute;
     left: 0;
-    color: white;
+    top: 0;
+    background-color: white;
+    opacity: .8;
+    
 
 }
 .upgradeInventory{
