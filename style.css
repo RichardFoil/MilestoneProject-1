@@ -55,10 +55,14 @@ body{
     display: flex;
     flex-direction: column;
     border: 1px solid black;
-    width: 10%;
+    width: 15%;
     position: absolute;
     left: 0;
+    color: white;
 
+}
+.upgradeInventory{
+    display: none;
 }
 
 #tree{

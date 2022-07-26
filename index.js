@@ -38,6 +38,12 @@ function hideButton(x){
     x.style.display = 'none';
 }
 
+//show upgrades in store
+function showIronAxe(){
+    let ironAxe = document.getElementById('ironAxeUpgrade')
+    ironAxe.style.display = 'block';
+}
+
 function buyLumberjack(){
     if(score >= ((autoClick+1)^8)){
         score = score - ((autoClick+1)^8);

@@ -34,8 +34,10 @@
                 </button>
 
                 <div class ="upgrades">
-                    <p class ="upgrade Inventory"> Upgrades: </p>
+                    <p> Upgrades: </p>
                     <br>
+                    <p class ="upgradeInventory" id="ironAxeUpgrade"><img class="Axe"  src="./assets/clip art/iron axe.png" alt="iron axe "> Clicks Worth 2 </p>
+
                    
 
                 </div>
@@ -44,7 +46,7 @@
                     <p class="Store Inventory"> STORE: </p>
 
                         <button onclick="buyLumberjack()" class="shopitem"> <img class="worker" class="lumberjack" src="./assets/clip art/lumberjack.png" alt="lumberjack"> LumberJack </button>
-                        <button onclick="buyIronAxe(); hideButton(this)" id="ironAxeButtonShop" class="shopitem"> <img class="Axe" class="iron" src="./assets/clip art/iron axe.png" alt="iron axe "> Iron Axe</button>
+                        <button onclick="buyIronAxe(); hideButton(this); showIronAxe()" id="ironAxeButtonShop" class="shopitem"> <img class="Axe" class="iron" src="./assets/clip art/iron axe.png" alt="iron axe "> Iron Axe</button>
                         <button onclick="buyStoneAxe(); hideButton(this)"  id="stoneAxeButtonShop" class="shopitem"> <img class="Axe" class="stone" src="./assets/clip art/stone axe.png" alt="stone axe "> Stone Axe </button>
                         <button onclick="buyDoubleAxe(); hideButton(this)" id="doubleAxeButtonShop" class="shopitem"> <img class="Axe" class="doubleiron" src="./assets/clip art/doublesided iron axe..png" alt="double iron axe "> Double Iron Axe</button>
                         <button onclick="buyGoldAxe(); hideButton(this)" id="goldAxeButtonShop" class="shopitem"> <img class="Axe" class="gold" src="./assets/clip art/gold axe.png" alt=" gold axe "> Gold Axe</button>
