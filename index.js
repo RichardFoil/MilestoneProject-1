@@ -76,54 +76,6 @@ function load(){
 //     x.style.display = 'none';
 // }
  
-//show upgrades in store and replace old Axes
-function showIronAxe(){
-    if(score >= 100){
-    let ironAxe = document.getElementById('ironAxeUpgrade')
-    ironAxe.style.display = 'block';
-    }
-}
-function replaceIronAxe(){
-    if(score >= 1000){
-    let ironAxe = document.getElementById('ironAxeUpgrade')
-    ironAxe.style.display = 'none';
-    let stoneAxe = document.getElementById('stoneAxeUpgrade')
-    stoneAxe.style.display = 'block';
-    }
-}
-function replaceStoneAxe(){
-    if(score >= 10000){
-    let stoneAxe = document.getElementById('stoneAxeUpgrade')
-    stoneAxe.style.display = 'none';
-    let doubleAxe = document.getElementById('doubleAxeUpgrade')
-    doubleAxe.style.display = 'block';
-    }
-}
-function replaceDoubleAxe(){
-    if(score >= 100000){
-    let doubleAxe = document.getElementById('doubleAxeUpgrade')
-    doubleAxe.style.display = 'none';
-    let goldAxe = document.getElementById('goldAxeUpgrade')
-    goldAxe.style.display = 'block';
-    }
-}   
-function replaceGoldAxe(){
-    if(score >= 500000){
-    let goldAxe = document.getElementById('goldAxeUpgrade')
-    goldAxe.style.display = 'none';
-    let holyAxe = document.getElementById('holyAxeUpgrade')
-    holyAxe.style.display = 'block';
-    }
-}
-function replaceHolyAxe(){
-    if(score >= 10000000){
-    let holyAxe = document.getElementById('holyAxeUpgrade')
-    holyAxe.style.display = 'none';
-    let paulAxe = document.getElementById('paulAxeUpgrade')
-    paulAxe.style.display = 'block';
-    }
-}
-
 //make buildings apear after they are bought!
 function addLumberJack(){
     let lumberJack = document.getElementById('lumberjack')
@@ -157,6 +109,8 @@ function buyIronAxe(){
     if(score >= 100){
         perClick = 10;
         score = score - 100;
+        let ironAxe = document.getElementById('ironAxeUpgrade')
+        ironAxe.style.display = 'block';
         update();   
     }
 }
@@ -165,6 +119,10 @@ function buyStoneAxe(){
     if(score >= 1000){
         perClick = 50;
         score = score - 1000
+        let ironAxe = document.getElementById('ironAxeUpgrade')
+        ironAxe.style.display = 'none';
+        let stoneAxe = document.getElementById('stoneAxeUpgrade')
+        stoneAxe.style.display = 'block';
         update();
     }
 }
@@ -173,6 +131,10 @@ function buyDoubleAxe(){
     if(score >= 10000){
         perClick = 100;
         score = score - 10000
+        let stoneAxe = document.getElementById('stoneAxeUpgrade')
+        stoneAxe.style.display = 'none';
+        let doubleAxe = document.getElementById('doubleAxeUpgrade')
+        doubleAxe.style.display = 'block';
         update();
     }
 }
@@ -181,6 +143,10 @@ function buyGoldAxe(){
     if(score >= 100000){
         perClick = 500;
         score = score - 100000
+        let doubleAxe = document.getElementById('doubleAxeUpgrade')
+        doubleAxe.style.display = 'none';
+        let goldAxe = document.getElementById('goldAxeUpgrade')
+        goldAxe.style.display = 'block';
         update();
     }
 }
@@ -188,13 +154,21 @@ function buyHolyAxe(){
     if(score >= 500000){
        perClick = 1000;
        score = score - 500000
-        update();
+       let goldAxe = document.getElementById('goldAxeUpgrade')
+       goldAxe.style.display = 'none';
+       let holyAxe = document.getElementById('holyAxeUpgrade')
+       holyAxe.style.display = 'block';
+       update();
     }
 }
 function buyPaulAxe(){
     if(score >= 10000000){
         perClick = 10000;
         score = score - 10000000
+        let holyAxe = document.getElementById('holyAxeUpgrade')
+        holyAxe.style.display = 'none';
+        let paulAxe = document.getElementById('paulAxeUpgrade')
+        paulAxe.style.display = 'block';
         update();
     }
 }
