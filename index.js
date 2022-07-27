@@ -33,6 +33,7 @@ function add(){
     update()    
 }
 
+
 //save button
 function save(){
     localStorage.setItem("score", score);
@@ -46,6 +47,7 @@ function save(){
     localStorage.setItem("wizardTowerAmount", wizardTowerOwn);
   
 }
+
 //load button
 function load(){
     score = localStorage.getItem("score");
@@ -66,43 +68,60 @@ function load(){
     sawmillOwn = parseInt(sawmillOwn);
     wizardTowerOwn = localStorage.getItem("wizardTowerAmount");
     wizardTowerOwn = parseInt(wizardTowerOwn);
-    update()
 }
 
 
-//hide buttons after clicking code from https://www.howtocodeschool.com/2021/10/javascript-hide-button-after-click.html
-function hideButton(x){
-    x.style.display = 'none';
-}
+// //hide buttons after clicking code from https://www.howtocodeschool.com/2021/10/javascript-hide-button-after-click.html
+// function hideButton(x){
+//     x.style.display = 'none';
+// }
  
 //show upgrades in store and replace old Axes
 function showIronAxe(){
+    if(score >= 100){
     let ironAxe = document.getElementById('ironAxeUpgrade')
     ironAxe.style.display = 'block';
+    }
 }
 function replaceIronAxe(){
+    if(score >= 1000){
     let ironAxe = document.getElementById('ironAxeUpgrade')
     ironAxe.style.display = 'none';
     let stoneAxe = document.getElementById('stoneAxeUpgrade')
     stoneAxe.style.display = 'block';
+    }
 }
 function replaceStoneAxe(){
+    if(score >= 10000){
     let stoneAxe = document.getElementById('stoneAxeUpgrade')
     stoneAxe.style.display = 'none';
     let doubleAxe = document.getElementById('doubleAxeUpgrade')
     doubleAxe.style.display = 'block';
+    }
 }
 function replaceDoubleAxe(){
+    if(score >= 100000){
     let doubleAxe = document.getElementById('doubleAxeUpgrade')
     doubleAxe.style.display = 'none';
     let goldAxe = document.getElementById('goldAxeUpgrade')
     goldAxe.style.display = 'block';
-}
+    }
+}   
 function replaceGoldAxe(){
+    if(score >= 500000){
     let goldAxe = document.getElementById('goldAxeUpgrade')
     goldAxe.style.display = 'none';
     let holyAxe = document.getElementById('holyAxeUpgrade')
     holyAxe.style.display = 'block';
+    }
+}
+function replaceHolyAxe(){
+    if(score >= 10000000){
+    let holyAxe = document.getElementById('holyAxeUpgrade')
+    holyAxe.style.display = 'none';
+    let paulAxe = document.getElementById('paulAxeUpgrade')
+    paulAxe.style.display = 'block';
+    }
 }
 
 //make buildings apear after they are bought!
@@ -229,6 +248,3 @@ function buyWizard(){
         update()
     }  
 }
-
-
-
