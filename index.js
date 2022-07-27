@@ -33,7 +33,6 @@ function add(){
     update()    
 }
 
-
 //save button
 function save(){
     localStorage.setItem("score", score);
@@ -47,7 +46,6 @@ function save(){
     localStorage.setItem("wizardTowerAmount", wizardTowerOwn);
   
 }
-
 //load button
 function load(){
     score = localStorage.getItem("score");
@@ -68,6 +66,7 @@ function load(){
     sawmillOwn = parseInt(sawmillOwn);
     wizardTowerOwn = localStorage.getItem("wizardTowerAmount");
     wizardTowerOwn = parseInt(wizardTowerOwn);
+    update()
 }
 
 
