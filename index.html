@@ -11,6 +11,7 @@
     <body>
         <!-- <main> -->
             <div class ="game">
+
                 <div class="scoreboard">
                     <p id="totalscore"> 
                         Score: 
@@ -29,6 +30,16 @@
                         Load
                         </button>
                 </div>
+                <div class = "buildings">
+                    <img id="lumberjack" src="./assets/clip art/lumberjack.png" alt="lumberjack">
+                    <img src="" id="lumberjack">
+                    <img id="house" src="./assets/clip art/house (2).png" alt="house ">
+                    <img id="farm" src="./assets/clip art/farm (2).png" alt="farm">
+                    <img id="blacksmith" src="./assets/clip art/blacksmith.png" alt="blacksmith">
+                    <img id="sawmill" src="./assets/clip art/sawmill (2).png" alt="sawmill">
+                    <img id="wizard" src="./assets/clip art/wizard tower.png" alt="wizard tower">
+
+                </div>
 
                 <button  id="points" onclick="add()">
                     <img id="tree" src="./assets/clip art/tree.png" alt="Big clicking tree">
@@ -45,30 +56,31 @@
                     <p class ="upgradeInventory" id="holyAxeUpgrade"><img class="Axe" src="./assets/clip art/holy axe.png" alt=" holy axe "> Holy Axe: <br> Clicks Worth 1000 </p>
                     <p class ="upgradeInventory" id="paulAxeUpgrade"><img class="Axe" src="./assets/clip art/Paul Bunyon.png" alt="best axe ">The Legendary Paul Bunyon's Axe: <br> Clicks Worth 10000 </p>
                    
-                    <p id="lumberJackAmount"> you own 0 LumberJacks</p>
-                    <p id="houseAmount"> you own 0 house(s)</p>
+                    <p id="lumberJackAmount"> you own 0 LumberJack(s)</p>
+                    <p id="houseAmount"> you own 0 House(s)</p>
                     <p id="farmAmount"> you own 0 Farm(s)</p>
                     <p id="blacksmithAmount"> you own 0 Blacksimth(s)</p>
                     <p id="sawmillAmount"> you own 0 Sawmill(s)</p>
-                    <p id="wizardTowerAmount"> you own 0 Wizard tower(s)</p> 
+                    <p id="wizardTowerAmount"> you own 0 Wizard Tower(s)</p> 
 
                 </div>
                 
                 <div id ="shop">
                     <p class="Store Inventory"> <br>STORE: </p>
 
-                        <button onclick="buyLumberjack()" class="shopitem"> <img class="worker" class="lumberjack" src="./assets/clip art/lumberjack.png" alt="lumberjack"> LumberJack </button>
-                        <button onclick="buyIronAxe(); hideButton(this); showIronAxe()" id="ironAxeButtonShop" class="shopitem"> <img class="Axe" class="iron" src="./assets/clip art/iron axe.png" alt="iron axe "> Iron Axe <br> Cost: 100</button>
-                        <button onclick="buyStoneAxe(); hideButton(this); replaceIronAxe()"  id="stoneAxeButtonShop" class="shopitem"> <img class="Axe" class="stone" src="./assets/clip art/stone axe.png" alt="stone axe "> Stone Axe <br> Cost: 1000 </button>
-                        <button onclick="buyDoubleAxe(); hideButton(this); replaceStoneAxe()" id="doubleAxeButtonShop" class="shopitem"> <img class="Axe" class="doubleiron" src="./assets/clip art/doublesided iron axe..png" alt="double iron axe "> Double Iron Axe <br> Cost: 10000</button>
-                        <button onclick="buyGoldAxe(); hideButton(this); replaceDoubleAxe() " id="goldAxeButtonShop" class="shopitem"> <img class="Axe" class="gold" src="./assets/clip art/gold axe.png" alt=" gold axe "> Gold Axe <br> Cost: 100000 </button>
-                        <button onclick="buyHolyAxe(); hideButton(this); replaceGoldAxe()" id="holyAxeButtonShop" class="shopitem"> <img class="Axe" class="holy" src="./assets/clip art/holy axe.png" alt=" holy axe "> Holy Axe <br> Cost: 500000 </button>
-                        <button onclick="buyPaulAxe(); hideButton(this); replaceHolyAxe()" id="paulAxeButtonShop" class="shopitem"> <img class="Axe" class="bunyon" src="./assets/clip art/Paul Bunyon.png" alt="best axe ">Paul Bunyon's Axe <br> Cost: 10000000 </button>
-                        <button onclick="buyHouse()" class="shopitem"> <img class="building" class="house" src="./assets/clip art/house (2).png" alt="house "> house</button>
-                        <button onclick="buyFarm()"  class="shopitem"> <img class="building" class="farm" src="./assets/clip art/farm (2).png" alt="farm"> farm</button>
-                        <button onclick="buyBlacksmith()" class="shopitem"> <img class="building" class="blacksmith" src="./assets/clip art/blacksmith.png" alt="blacksmith"> blacksmith </button>
-                        <button onclick="buySawmill()" class="shopitem"> <img class="building" class="sawmill" src="./assets/clip art/sawmill (2).png" alt="sawmill"> sawmill</button>
-                        <button onclick="buyWizard()" class="shopitem"> <img class="building" class="wizard" src="./assets/clip art/wizard tower.png" alt="wizard tower"> wizard tower</button>
+                        
+                        <button onclick="buyIronAxe(); hideButton(this); showIronAxe()" id="ironAxeButtonShop" class="shopitem"> <img class="Axe" class="iron" src="./assets/clip art/iron axe.png" alt="iron axe "> <br>Iron Axe <br> Cost: 100</button>
+                        <button onclick="buyStoneAxe(); hideButton(this); replaceIronAxe()"  id="stoneAxeButtonShop" class="shopitem"> <img class="Axe" class="stone" src="./assets/clip art/stone axe.png" alt="stone axe "> <br>Stone Axe <br> Cost: 1000 </button>
+                        <button onclick="buyDoubleAxe(); hideButton(this); replaceStoneAxe()" id="doubleAxeButtonShop" class="shopitem"> <img class="Axe" class="doubleiron" src="./assets/clip art/doublesided iron axe..png" alt="double iron axe "><br> Double Iron Axe <br> Cost: 10000</button>
+                        <button onclick="buyGoldAxe(); hideButton(this); replaceDoubleAxe() " id="goldAxeButtonShop" class="shopitem"> <img class="Axe" class="gold" src="./assets/clip art/gold axe.png" alt=" gold axe "><br> Gold Axe <br> Cost: 100000 </button>
+                        <button onclick="buyHolyAxe(); hideButton(this); replaceGoldAxe()" id="holyAxeButtonShop" class="shopitem"> <img class="Axe" class="holy" src="./assets/clip art/holy axe.png" alt=" holy axe "><br> Holy Axe <br> Cost: 500000 </button>
+                        <button onclick="buyPaulAxe(); hideButton(this); replaceHolyAxe()" id="paulAxeButtonShop" class="shopitem"> <img class="Axe" class="bunyon" src="./assets/clip art/Paul Bunyon.png" alt="best axe "><br> Paul Bunyon's Axe <br> Cost: 10000000 </button>
+                        <button onclick="buyLumberjack(); addLumberJack();" class="shopitem"> <img class="worker" class="lumberjack" src="./assets/clip art/lumberjack.png" alt="lumberjack"> <br> LumberJack <br> Cost: 500 * (LumberJacks Owned +1)  </button>
+                        <button onclick="buyHouse(); addHouse()" class="shopitem"> <img class="building" class="house" src="./assets/clip art/house (2).png" alt="house "> <br> House <br> Cost: 5000 * (Houses Owned +1) </button>
+                        <button onclick="buyFarm(); addFarm()"  class="shopitem"> <img class="building" class="farm" src="./assets/clip art/farm (2).png" alt="farm"> <br> Farm <br> Cost: 50000 * (Farms Owned +1) </button>
+                        <button onclick="buyBlacksmith(); addBlacksmith()" class="shopitem"> <img class="building" class="blacksmith" src="./assets/clip art/blacksmith.png" alt="blacksmith"> <br> Blacksmith <br> Cost: 5000000 * (Blacksmith Owned +1)</button>
+                        <button onclick="buySawmill(); addSawmill()" class="shopitem"> <img class="building" class="sawmill" src="./assets/clip art/sawmill (2).png" alt="sawmill"> <br> Sawmill  <br> Cost: 10000000 * (Sawmill Owned +1)</button>
+                        <button onclick="buyWizard(); addWizard()" class="shopitem"> <img class="building" class="wizard" src="./assets/clip art/wizard tower.png" alt="wizard tower"> <br> Wizard Tower  <br> Cost: 1000000000 * (Wizard Tower Owned +1)</button>
                         
 
 

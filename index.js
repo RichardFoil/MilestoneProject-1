@@ -9,9 +9,15 @@ let sawmillOwn = 0;
 let wizardTowerOwn = 0;
 // let clicksPerSecond 
 
-//update scoreboard every second
+//update scoreboard and upgrade menu every second
 function update(){
     document.getElementById("score").value= score;
+    document.getElementById("lumberJackAmount").innerHTML = "you own " + lumberJacksOwn + " LumberJack(s)"
+    document.getElementById("houseAmount").innerHTML = "you own " + houseOwn + " House(s)"
+    document.getElementById("farmAmount").innerHTML = "you own " + farmOwn + " Farm(s)"
+    document.getElementById("blacksmithAmount").innerHTML = "you own " + blacksmithOwn + " Blacksmith(s)"
+    document.getElementById("sawmillAmount").innerHTML = "you own " + sawmillOwn + " Sawmill(s)"
+    document.getElementById("wizardTowerAmount").innerHTML = "you own " + wizardTowerOwn + " Wizard Tower(s)"
 }
 function timer(){
     score = score + autoClick;
@@ -27,9 +33,12 @@ function add(){
     update()    
 }
 
+
 //save button
 function save(){
     localStorage.setItem("score", score);
+    localStorage.setItem("autoClick", autoClick);
+    localStorage.setItem("perClick", perClick);
     localStorage.setItem("lumberJackAmount", lumberJacksOwn);
     localStorage.setItem("houseAmount", houseOwn);
     localStorage.setItem("farmAmount", farmOwn);
@@ -38,10 +47,15 @@ function save(){
     localStorage.setItem("wizardTowerAmount", wizardTowerOwn);
   
 }
+
 //load button
 function load(){
     score = localStorage.getItem("score");
     score = parseInt(score);
+    autoClick = localStorage.getItem("autoClick");
+    autoClick = parseInt(autoClick);
+    perClick = localStorage.getItem("perClick");
+    perClick = parseInt(perClick);
     lumberJacksOwn = localStorage.getItem("lumberJackAmount");
     lumberJacksOwn = parseInt(lumberJacksOwn);
     houseOwn = localStorage.getItem("houseAmount");
@@ -54,7 +68,6 @@ function load(){
     sawmillOwn = parseInt(sawmillOwn);
     wizardTowerOwn = localStorage.getItem("wizardTowerAmount");
     wizardTowerOwn = parseInt(wizardTowerOwn);
-    update()
 }
 
 
@@ -93,15 +106,35 @@ function replaceGoldAxe(){
     holyAxe.style.display = 'block';
 }
 
-function buyLumberjack(){
-    if(score >= ((autoClick+1)*10)){
-        score = score - ((autoClick+1)*10);
-        autoClick = autoClick + 1;
-        update()
-    
-    }
+//make buildings apear after they are bought!
+function addLumberJack(){
+    let lumberJack = document.getElementById('lumberjack')
+    lumberJack.style.display = 'inline';
 }
 
+function addHouse(){
+    let house = document.getElementById('house')
+    house.style.display = 'inline';
+}
+function addFarm(){
+    let farm = document.getElementById('farm')
+    farm.style.display = 'inline';
+}
+function addBlacksmith(){
+    let blackSmith = document.getElementById('blacksmith')
+    blackSmith.style.display = 'inline';
+}
+function addSawmill(){
+    let sawMill = document.getElementById('sawmill')
+    sawMill.style.display = 'inline';
+}
+function addWizard(){
+    let wizard = document.getElementById('wizard')
+    wizard.style.display = 'inline';
+}
+
+
+//clicking functions and autoclicking functions
 function buyIronAxe(){
     if(score >= 100){
         perClick = 10;
@@ -147,20 +180,55 @@ function buyPaulAxe(){
         update();
     }
 }
+
+function buyLumberjack(){
+    if(score >= 500 * ((lumberJacksOwn+1))){
+        score = score - (500 *((lumberJacksOwn +1)))  ;
+        autoClick = autoClick + 1;
+        lumberJacksOwn = lumberJacksOwn + 1
+        update()
+    }
+}
+
 function buyHouse(){
-        
+    if(score >= 5000 * ((houseOwn+1))){
+        score = score - (5000 *((houseOwn +1)))  ;
+        autoClick = autoClick + 10;
+        houseOwn = houseOwn + 1
+        update()
+    }   
 }
 function buyFarm(){
-        
+    if(score >= 50000 * ((farmOwn+1))){
+        score = score - (50000 *((farmOwn +1)))  ;
+        autoClick = autoClick + 100;
+        farmOwn = farmOwn + 1
+        update()
+    }     
 }
 function buyBlacksmith(){
-    
+    if(score >= 5000000 * ((blacksmithOwn+1))){
+        score = score - (5000000 *((blacksmithOwn +1)))  ;
+        autoClick = autoClick + 1000;
+        blacksmithOwn = blacksmithOwn + 1
+        update()
+    }    
 }
 function buySawmill(){
-    
+    if(score >= 10000000 * ((sawmillOwn+1))){
+        score = score - (10000000 *((sawmillOwn +1)))  ;
+        autoClick = autoClick + 5000;
+        sawmillOwn = sawmillOwn + 1
+        update()
+    }    
 }
 function buyWizard(){
-    
+    if(score >= 1000000000 * ((wizardTowerOwn+1))){
+        score = score - (1000000000 *((wizardTowerOwn +1)))  ;
+        autoClick = autoClick + 10000;
+        wizardTowerOwn = wizardTowerOwn + 1
+        update()
+    }  
 }
 
 
