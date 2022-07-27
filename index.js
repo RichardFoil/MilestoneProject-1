@@ -70,39 +70,8 @@ function load(){
     wizardTowerOwn = parseInt(wizardTowerOwn);
 }
 
-
-// //hide buttons after clicking code from https://www.howtocodeschool.com/2021/10/javascript-hide-button-after-click.html
-// function hideButton(x){
-//     x.style.display = 'none';
-// }
  
 //make buildings apear after they are bought!
-function addLumberJack(){
-    let lumberJack = document.getElementById('lumberjack')
-    lumberJack.style.display = 'inline';
-}
-
-function addHouse(){
-    let house = document.getElementById('house')
-    house.style.display = 'inline';
-}
-function addFarm(){
-    let farm = document.getElementById('farm')
-    farm.style.display = 'inline';
-}
-function addBlacksmith(){
-    let blackSmith = document.getElementById('blacksmith')
-    blackSmith.style.display = 'inline';
-}
-function addSawmill(){
-    let sawMill = document.getElementById('sawmill')
-    sawMill.style.display = 'inline';
-}
-function addWizard(){
-    let wizard = document.getElementById('wizard')
-    wizard.style.display = 'inline';
-}
-
 
 //clicking functions and autoclicking functions
 function buyIronAxe(){
@@ -111,6 +80,8 @@ function buyIronAxe(){
         score = score - 100;
         let ironAxe = document.getElementById('ironAxeUpgrade')
         ironAxe.style.display = 'block';
+        let ironAxeButton = document.getElementById('ironAxeButtonShop')
+        ironAxeButton.style.display = 'none';
         update();   
     }
 }
@@ -123,6 +94,8 @@ function buyStoneAxe(){
         ironAxe.style.display = 'none';
         let stoneAxe = document.getElementById('stoneAxeUpgrade')
         stoneAxe.style.display = 'block';
+        let stoneAxeButton = document.getElementById('stoneAxeButtonShop')
+        stoneAxeButton.style.display = 'none';
         update();
     }
 }
@@ -135,6 +108,8 @@ function buyDoubleAxe(){
         stoneAxe.style.display = 'none';
         let doubleAxe = document.getElementById('doubleAxeUpgrade')
         doubleAxe.style.display = 'block';
+        let doubleAxeButton = document.getElementById('doubleAxeButtonShop')
+        doubleAxeButton.style.display = 'none';
         update();
     }
 }
@@ -147,6 +122,8 @@ function buyGoldAxe(){
         doubleAxe.style.display = 'none';
         let goldAxe = document.getElementById('goldAxeUpgrade')
         goldAxe.style.display = 'block';
+        let goldAxeButton = document.getElementById('goldAxeButtonShop')
+        goldAxeButton.style.display = 'none';
         update();
     }
 }
@@ -158,6 +135,8 @@ function buyHolyAxe(){
        goldAxe.style.display = 'none';
        let holyAxe = document.getElementById('holyAxeUpgrade')
        holyAxe.style.display = 'block';
+       let holyAxeButton = document.getElementById('holyAxeButtonShop')
+       holyAxeButton.style.display = 'none';
        update();
     }
 }
@@ -169,6 +148,8 @@ function buyPaulAxe(){
         holyAxe.style.display = 'none';
         let paulAxe = document.getElementById('paulAxeUpgrade')
         paulAxe.style.display = 'block';
+        let paulAxeButton = document.getElementById('paulAxeButtonShop')
+        paulAxeButton.style.display = 'none';
         update();
     }
 }
@@ -178,6 +159,8 @@ function buyLumberjack(){
         score = score - (500 *((lumberJacksOwn +1)))  ;
         autoClick = autoClick + 1;
         lumberJacksOwn = lumberJacksOwn + 1
+        let lumberJack = document.getElementById('lumberjack')
+        lumberJack.style.display = 'inline';
         update()
     }
 }
@@ -187,6 +170,8 @@ function buyHouse(){
         score = score - (5000 *((houseOwn +1)))  ;
         autoClick = autoClick + 10;
         houseOwn = houseOwn + 1
+        let house = document.getElementById('house')
+        house.style.display = 'inline';
         update()
     }   
 }
@@ -195,6 +180,8 @@ function buyFarm(){
         score = score - (50000 *((farmOwn +1)))  ;
         autoClick = autoClick + 100;
         farmOwn = farmOwn + 1
+        let farm = document.getElementById('farm')
+        farm.style.display = 'inline';
         update()
     }     
 }
@@ -203,6 +190,8 @@ function buyBlacksmith(){
         score = score - (5000000 *((blacksmithOwn +1)))  ;
         autoClick = autoClick + 1000;
         blacksmithOwn = blacksmithOwn + 1
+        let blackSmith = document.getElementById('blacksmith')
+        blackSmith.style.display = 'inline';
         update()
     }    
 }
@@ -211,6 +200,8 @@ function buySawmill(){
         score = score - (10000000 *((sawmillOwn +1)))  ;
         autoClick = autoClick + 5000;
         sawmillOwn = sawmillOwn + 1
+        let sawMill = document.getElementById('sawmill')
+        sawMill.style.display = 'inline';
         update()
     }    
 }
@@ -219,6 +210,8 @@ function buyWizard(){
         score = score - (1000000000 *((wizardTowerOwn +1)))  ;
         autoClick = autoClick + 10000;
         wizardTowerOwn = wizardTowerOwn + 1
+        let wizard = document.getElementById('wizard')
+        wizard.style.display = 'inline';
         update()
     }  
 }
