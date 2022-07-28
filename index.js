@@ -9,6 +9,10 @@ let sawmillOwn = 0;
 let wizardTowerOwn = 0;
 // let clicksPerSecond 
 
+document.getElementsByClassName("game").addEventListener("load", alert)
+function alert(){
+
+}
 //update scoreboard and upgrade menu every second
 function update(){
     document.getElementById("score").value= score;
@@ -40,7 +44,13 @@ function add(){
     update()    
 }
 
-
+//submit
+function submit(){
+    console.log(score)
+    return(()=>{
+        
+    })
+}
 //save button
 function save(){
     localStorage.setItem("score", score);

@@ -153,3 +153,26 @@ body{
  #paulAxeButtonShop{
     display: none;
  }
+/* code from https://www.w3schools.com/howto/howto_js_alert.asp */
+ .alert {
+    position: fixed;
+    top: 50%;
+    padding: 20px;
+    background-color: white;
+    opacity: .9;
+    color: black;
+    border: 5px solid black;
+
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: black;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+ 
