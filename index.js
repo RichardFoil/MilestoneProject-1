@@ -13,11 +13,18 @@ let wizardTowerOwn = 0;
 function update(){
     document.getElementById("score").value= score;
     document.getElementById("lumberJackAmount").innerHTML = "you own " + lumberJacksOwn + " LumberJack(s)"
+    document.getElementById('lumberJackCost').innerHTML = ((lumberJacksOwn+1 )* 500)
     document.getElementById("houseAmount").innerHTML = "you own " + houseOwn + " House(s)"
+    document.getElementById('houseCost').innerHTML = ((houseOwn+1 )* 5000)
     document.getElementById("farmAmount").innerHTML = "you own " + farmOwn + " Farm(s)"
+    document.getElementById('farmCost').innerHTML = ((farmOwn+1 )* 50000)
     document.getElementById("blacksmithAmount").innerHTML = "you own " + blacksmithOwn + " Blacksmith(s)"
+    document.getElementById('blackSmithCost').innerHTML = ((blacksmithOwn+1 )* 5000000)
     document.getElementById("sawmillAmount").innerHTML = "you own " + sawmillOwn + " Sawmill(s)"
+    document.getElementById('sawmillCost').innerHTML = ((sawmillOwn+1 )* 10000000)
     document.getElementById("wizardTowerAmount").innerHTML = "you own " + wizardTowerOwn + " Wizard Tower(s)"
+    document.getElementById('wizardCost').innerHTML = ((wizardTowerOwn+1 )* 1000000000)
+
 }
 function timer(){
     score = score + autoClick;
@@ -71,8 +78,6 @@ function load(){
 }
 
  
-//make buildings apear after they are bought!
-
 //clicking functions and autoclicking functions
 function buyIronAxe(){
     if(score >= 100){
@@ -82,6 +87,8 @@ function buyIronAxe(){
         ironAxe.style.display = 'block';
         let ironAxeButton = document.getElementById('ironAxeButtonShop')
         ironAxeButton.style.display = 'none';
+        let stoneAxe = document.getElementById('stoneAxeButtonShop')
+        stoneAxe.style.display = 'inline';
         update();   
     }
 }
@@ -95,6 +102,8 @@ function buyStoneAxe(){
         let stoneAxe = document.getElementById('stoneAxeUpgrade')
         stoneAxe.style.display = 'block';
         let stoneAxeButton = document.getElementById('stoneAxeButtonShop')
+        let doubleAxe = document.getElementById('doubleAxeButtonShop')
+        doubleAxe.style.display = 'inline';
         stoneAxeButton.style.display = 'none';
         update();
     }
@@ -109,6 +118,8 @@ function buyDoubleAxe(){
         let doubleAxe = document.getElementById('doubleAxeUpgrade')
         doubleAxe.style.display = 'block';
         let doubleAxeButton = document.getElementById('doubleAxeButtonShop')
+        let goldAxe = document.getElementById('goldAxeButtonShop')
+        goldAxe.style.display = 'inline';
         doubleAxeButton.style.display = 'none';
         update();
     }
@@ -123,6 +134,8 @@ function buyGoldAxe(){
         let goldAxe = document.getElementById('goldAxeUpgrade')
         goldAxe.style.display = 'block';
         let goldAxeButton = document.getElementById('goldAxeButtonShop')
+        let holyAxe = document.getElementById('stoneAxeButtonShop')
+        holyAxe.style.display = 'inline';
         goldAxeButton.style.display = 'none';
         update();
     }
@@ -136,6 +149,8 @@ function buyHolyAxe(){
        let holyAxe = document.getElementById('holyAxeUpgrade')
        holyAxe.style.display = 'block';
        let holyAxeButton = document.getElementById('holyAxeButtonShop')
+       let paulAxe = document.getElementById('paulAxeButtonShop')
+       paulAxe.style.display = 'inline';
        holyAxeButton.style.display = 'none';
        update();
     }

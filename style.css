@@ -20,8 +20,7 @@ body{
 }
 
 #shop{
-    margin-left: -10px;
-    width: 100%;
+    width: 50%;
     height: 11%;
     display: flex;
     flex-direction: row;
@@ -30,9 +29,10 @@ body{
     border: 5px inset gold;
     background-color: transparent;
     position: fixed;
-    bottom: 0;
+    left: 20%;
+    top: 88%;
     color: white;
-     
+    
 }
 
 
@@ -130,4 +130,26 @@ body{
     position: fixed;
     left: 16%;
     bottom: 58%
+ }
+
+ #sound{
+    position: fixed;
+    left: 10%;
+    width: 8%;
+    height: 3%;
+ }
+ #stoneAxeButtonShop{
+    display: none;
+ }
+ #doubleAxeButtonShop{
+    display: none;
+ }
+ #goldAxeButtonShop{
+    display: none;
+ }
+ #holyAxeButtonShop{
+    display: none;
+ }
+ #paulAxeButtonShop{
+    display: none;
  }

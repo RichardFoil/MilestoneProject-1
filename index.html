@@ -6,12 +6,17 @@
     <title>Milestone Project 1</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <audio id="sound" autoplay loop controls><source src="./assets/audio/mixkit-river-in-the-forest-with-birds-1216.wav" type="audio/wav"></audio>
     <script src='index.js'></script>
+
+    
 </head>
     <body>
         <!-- <main> -->
             <div class ="game">
-
+                <script> window.alert(
+                    "WELCOME TO THE THIS WONDERFUL CLICKING FOREST! TO GET STARTED CLICK ON THE BIG TREE WITH THE FAINT WHITE 'X' AROUND IT! THIS WILL ALLOW YOU TO INCREASE YOUR SCORE! WHEN YOU HAVE CLICKED ENOUGH YOU CAN PURCHASE NEW ITEMS AND UPGRADES FROM THE STORE AT THE BOTTUM OF THE SCREEN! WHEN YOU ARE ALL DONE WITH THE GAME YOU CAN CLICK THE SUBMIT BUTTON TO SUBMIT YOUR SCORE! IF YOU AREN'T READY TO CALL IT QUITS JUST YET BUT HAVE TO GO! CLICK THE SAVE BUTTON AND LOAD YOUR PROGRESS LATER! WARNING! YOU WON'T BE ABLE TO KEEP YOUR AXE UPGRADES UPON SAVING AND LOADING!! I HOPE YOU ENJOY MY FIRST BROWSER GAME"
+                    ) </script>
                 <div class="scoreboard">
                     <p id="totalscore"> 
                         Score: 
@@ -74,12 +79,12 @@
                         <button onclick="buyGoldAxe()" id="goldAxeButtonShop" class="shopitem"> <img class="Axe" class="gold" src="./assets/clip art/gold axe.png" alt=" gold axe "><br> Gold Axe <br> Cost: 100000 </button>
                         <button onclick="buyHolyAxe()" id="holyAxeButtonShop" class="shopitem"> <img class="Axe" class="holy" src="./assets/clip art/holy axe.png" alt=" holy axe "><br> Holy Axe <br> Cost: 500000 </button>
                         <button onclick="buyPaulAxe()" id="paulAxeButtonShop" class="shopitem"> <img class="Axe" class="bunyon" src="./assets/clip art/Paul Bunyon.png" alt="best axe "><br> Paul Bunyon's Axe <br> Cost: 10000000 </button>
-                        <button onclick="buyLumberjack()" class="shopitem"> <img class="worker" class="lumberjack" src="./assets/clip art/lumberjack.png" alt="lumberjack"> <br> LumberJack <br> Cost: 500 * (LumberJacks Owned +1)  </button>
-                        <button onclick="buyHouse()" class="shopitem"> <img class="building" class="house" src="./assets/clip art/house (2).png" alt="house "> <br> House <br> Cost: 5000 * (Houses Owned +1) </button>
-                        <button onclick="buyFarm()"  class="shopitem"> <img class="building" class="farm" src="./assets/clip art/farm (2).png" alt="farm"> <br> Farm <br> Cost: 50000 * (Farms Owned +1) </button>
-                        <button onclick="buyBlacksmith()" class="shopitem"> <img class="building" class="blacksmith" src="./assets/clip art/blacksmith.png" alt="blacksmith"> <br> Blacksmith <br> Cost: 5000000 * (Blacksmith Owned +1)</button>
-                        <button onclick="buySawmill()" class="shopitem"> <img class="building" class="sawmill" src="./assets/clip art/sawmill (2).png" alt="sawmill"> <br> Sawmill  <br> Cost: 10000000 * (Sawmill Owned +1)</button>
-                        <button onclick="buyWizard()" class="shopitem"> <img class="building" class="wizard" src="./assets/clip art/wizard tower.png" alt="wizard tower"> <br> Wizard Tower  <br> Cost: 1000000000 * (Wizard Tower Owned +1)</button>
+                        <button onclick="buyLumberjack()" class="shopitem"> <img class="worker" class="lumberjack" src="./assets/clip art/lumberjack.png" alt="lumberjack"> <br> LumberJack <br> Cost: <div id="lumberJackCost">500</div></button>
+                        <button onclick="buyHouse()" class="shopitem"> <img class="building" class="house" src="./assets/clip art/house (2).png" alt="house "> <br> House <br> Cost: <div id="houseCost">5000</div></button>
+                        <button onclick="buyFarm()"  class="shopitem"> <img class="building" class="farm" src="./assets/clip art/farm (2).png" alt="farm"> <br> Farm <br> Cost: <div id="farmCost">50000</div> </button>
+                        <button onclick="buyBlacksmith()" class="shopitem"> <img class="building" class="blacksmith" src="./assets/clip art/blacksmith.png" alt="blacksmith"> <br> Blacksmith <br> Cost: <div id="blackSmithCost">5000000</div></button>
+                        <button onclick="buySawmill()" class="shopitem"> <img class="building" class="sawmill" src="./assets/clip art/sawmill (2).png" alt="sawmill"> <br> Sawmill  <br> Cost: <div id="sawmillCost">10000000</div> </button>
+                        <button onclick="buyWizard()" class="shopitem"> <img class="building" class="wizard" src="./assets/clip art/wizard tower.png" alt="wizard tower"> <br> Wizard Tower  <br> Cost: <div id="wizardCost">1000000000</div></button>
                         
                 </div>
                 
