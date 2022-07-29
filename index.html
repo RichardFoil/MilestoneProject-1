@@ -17,14 +17,17 @@
                 <!-- code for alert from https://www.w3schools.com/howto/howto_js_alert.asp -->
                 <div class="alert">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-                    <strong>WELCOME TO THE THIS WONDERFUL CLICKING FOREST!</strong> TO GET STARTED CLICK ON THE BIG TREE WITH THE FAINT WHITE 'X' AROUND IT! THIS WILL ALLOW YOU TO INCREASE YOUR SCORE! WHEN YOU HAVE CLICKED ENOUGH YOU CAN PURCHASE NEW ITEMS AND UPGRADES FROM THE STORE AT THE BOTTUM OF THE SCREEN! WHEN YOU ARE ALL DONE WITH THE GAME YOU CAN CLICK THE SUBMIT BUTTON TO SUBMIT YOUR SCORE! IF YOU AREN'T READY TO CALL IT QUITS JUST YET BUT HAVE TO GO! CLICK THE SAVE BUTTON AND LOAD YOUR PROGRESS LATER! WARNING! YOU WON'T BE ABLE TO KEEP YOUR AXE UPGRADES UPON SAVING AND LOADING!! I HOPE YOU ENJOY MY FIRST BROWSER GAME.
+                    <strong>WELCOME TO THE THIS WONDERFUL CLICKING FOREST! TO GET STARTED CLICK ON THE BIG TREE WITH THE FAINT WHITE 'X' AROUND IT! THIS WILL ALLOW YOU TO INCREASE YOUR SCORE! WHEN YOU HAVE CLICKED ENOUGH YOU CAN PURCHASE NEW ITEMS AND UPGRADES FROM THE STORE AT THE BOTTUM OF THE SCREEN! WHEN YOU ARE ALL DONE WITH THE GAME YOU CAN CLICK THE SUBMIT BUTTON TO SUBMIT YOUR SCORE! IF YOU AREN'T READY TO CALL IT QUITS JUST YET BUT HAVE TO GO! CLICK THE SAVE BUTTON AND LOAD YOUR PROGRESS LATER! WARNING! YOU WON'T BE ABLE TO KEEP YOUR AXE UPGRADES UPON SAVING AND LOADING!! I HOPE YOU ENJOY MY FIRST BROWSER GAME.</strong>
                   </div>
                 <div class="scoreboard">
                     <p id="totalscore"> 
                         Score: 
                         <input type="text" id="score">
+                        <br>
+                        Clicks Per Second:
+                        <input type="text" id="clicksPerSecond">
                     </p>
-                   
+                                       
                         <button class ="submit" onclick="submit()">
                         Submit
                         </button>
@@ -55,19 +58,27 @@
                     <p> Upgrades: </p>
                     <br>
                     
-                    <p class ="upgradeInventory" id="ironAxeUpgrade"><img class="Axe"  src="./assets/clip art/iron axe.png" alt="iron axe ">  Iron Axe: <br> Clicks Worth 10 </p>
-                    <p class ="upgradeInventory" id="stoneAxeUpgrade"><img class="Axe" src="./assets/clip art/stone axe.png" alt="stone axe "> Stone Axe: <br> Clicks Worth 50 </p>
-                    <p class ="upgradeInventory" id="doubleAxeUpgrade"><img class="Axe" src="./assets/clip art/doublesided iron axe..png" alt="double iron axe "> Double Iron Axe: <br> Clicks Worth 100</p>
-                    <p class ="upgradeInventory" id="goldAxeUpgrade"><img class="Axe"  src="./assets/clip art/gold axe.png" alt=" gold axe "> Gold Axe: <br> Clicks Worth 500 </p>
-                    <p class ="upgradeInventory" id="holyAxeUpgrade"><img class="Axe" src="./assets/clip art/holy axe.png" alt=" holy axe "> Holy Axe: <br> Clicks Worth 1000 </p>
-                    <p class ="upgradeInventory" id="paulAxeUpgrade"><img class="Axe" src="./assets/clip art/Paul Bunyon.png" alt="best axe ">The Legendary Paul Bunyon's Axe: <br> Clicks Worth 10000 </p>
+                    <p class ="upgradeInventory" id="ironAxeUpgrade"><img class="Axe"  src="./assets/clip art/iron axe.png" alt="iron axe ">  Iron Axe
+                    <p class ="upgradeInventory" id="stoneAxeUpgrade"><img class="Axe" src="./assets/clip art/stone axe.png" alt="stone axe "> Stone Axe
+                    <p class ="upgradeInventory" id="doubleAxeUpgrade"><img class="Axe" src="./assets/clip art/doublesided iron axe..png" alt="double iron axe "> Double Iron Axe
+                    <p class ="upgradeInventory" id="goldAxeUpgrade"><img class="Axe"  src="./assets/clip art/gold axe.png" alt=" gold axe "> Gold Axe
+                    <p class ="upgradeInventory" id="holyAxeUpgrade"><img class="Axe" src="./assets/clip art/holy axe.png" alt=" holy axe "> Holy Axe
+                    <p class ="upgradeInventory" id="paulAxeUpgrade"><img class="Axe" src="./assets/clip art/Paul Bunyon.png" alt="best axe ">The Legendary Paul Bunyon's Axe
                    
-                    <p id="lumberJackAmount"> you own 0 LumberJack(s)</p>
-                    <p id="houseAmount"> you own 0 House(s)</p>
-                    <p id="farmAmount"> you own 0 Farm(s)</p>
-                    <p id="blacksmithAmount"> you own 0 Blacksimth(s)</p>
-                    <p id="sawmillAmount"> you own 0 Sawmill(s)</p>
-                    <p id="wizardTowerAmount"> you own 0 Wizard Tower(s)</p> 
+
+                    <div id="clickAmount"> you are clicking for 1 score </div>
+                    <br>
+                    <div id="lumberJackAmount"> you own 0 LumberJack(s)</div>
+                    <br>
+                    <div id="houseAmount"> you own 0 House(s)</div>
+                    <br>
+                    <div id="farmAmount"> you own 0 Farm(s)</div>
+                    <br>
+                    <div id="blacksmithAmount"> you own 0 Blacksimth(s)</div>
+                    <br>
+                    <div id="sawmillAmount"> you own 0 Sawmill(s)</div>
+                    <br>
+                    <div id="wizardTowerAmount"> you own 0 Wizard Tower(s)</div> 
 
                 </div>
                 

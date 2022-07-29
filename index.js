@@ -7,23 +7,26 @@ let farmOwn = 0;
 let blacksmithOwn = 0;
 let sawmillOwn = 0;
 let wizardTowerOwn = 0;
-// let clicksPerSecond 
+let upgradeInventory = document.getElementsByClassName('upgrades')
 
 //update scoreboard and upgrade menu every second
 function update(){
     document.getElementById("score").value= score;
-    document.getElementById("lumberJackAmount").innerHTML = "you own " + lumberJacksOwn + " LumberJack(s)"
+    document.getElementById('clicksPerSecond').value = autoClick
+    document.getElementById('clickAmount').innerHTML = "You are clicking for  " + perClick + "  score"
+    document.getElementById("lumberJackAmount").innerHTML = "You own " + lumberJacksOwn + " LumberJack(s)"
     document.getElementById('lumberJackCost').innerHTML = ((lumberJacksOwn+1 )* 500)
-    document.getElementById("houseAmount").innerHTML = "you own " + houseOwn + " House(s)"
+    document.getElementById("houseAmount").innerHTML = "You own " + houseOwn + " House(s)"
     document.getElementById('houseCost').innerHTML = ((houseOwn+1 )* 5000)
-    document.getElementById("farmAmount").innerHTML = "you own " + farmOwn + " Farm(s)"
+    document.getElementById("farmAmount").innerHTML = "You own " + farmOwn + " Farm(s)"
     document.getElementById('farmCost').innerHTML = ((farmOwn+1 )* 50000)
-    document.getElementById("blacksmithAmount").innerHTML = "you own " + blacksmithOwn + " Blacksmith(s)"
+    document.getElementById("blacksmithAmount").innerHTML = "You own " + blacksmithOwn + " Blacksmith(s)"
     document.getElementById('blackSmithCost').innerHTML = ((blacksmithOwn+1 )* 5000000)
-    document.getElementById("sawmillAmount").innerHTML = "you own " + sawmillOwn + " Sawmill(s)"
+    document.getElementById("sawmillAmount").innerHTML = "You own " + sawmillOwn + " Sawmill(s)"
     document.getElementById('sawmillCost').innerHTML = ((sawmillOwn+1 )* 10000000)
-    document.getElementById("wizardTowerAmount").innerHTML = "you own " + wizardTowerOwn + " Wizard Tower(s)"
+    document.getElementById("wizardTowerAmount").innerHTML = "You own " + wizardTowerOwn + " Wizard Tower(s)"
     document.getElementById('wizardCost').innerHTML = ((wizardTowerOwn+1 )* 1000000000)
+    
 
 }
 function timer(){
@@ -54,6 +57,7 @@ function save(){
     localStorage.setItem("blacksmithAmount", blacksmithOwn);
     localStorage.setItem("sawmillAmount", sawmillOwn);
     localStorage.setItem("wizardTowerAmount", wizardTowerOwn);
+    localStorage.setItem("upgradeInventory", upgradeInventory);
   
 }
 
@@ -77,6 +81,8 @@ function load(){
     sawmillOwn = parseInt(sawmillOwn);
     wizardTowerOwn = localStorage.getItem("wizardTowerAmount");
     wizardTowerOwn = parseInt(wizardTowerOwn);
+    upgradeInventory = localStorage.getItem("upgradeInventory")
+
 }
 
  
@@ -136,7 +142,7 @@ function buyGoldAxe(){
         let goldAxe = document.getElementById('goldAxeUpgrade')
         goldAxe.style.display = 'block';
         let goldAxeButton = document.getElementById('goldAxeButtonShop')
-        let holyAxe = document.getElementById('stoneAxeButtonShop')
+        let holyAxe = document.getElementById('holyAxeButtonShop')
         holyAxe.style.display = 'inline';
         goldAxeButton.style.display = 'none';
         update();
