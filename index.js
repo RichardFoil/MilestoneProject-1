@@ -15,7 +15,7 @@ function update(){
     document.getElementById("score").value= score;
     document.getElementById('clicksPerSecond').value = autoClick * multiplier
     document.getElementById('clickAmount').innerHTML = "You are clicking for  " + perClick * multiplier + "  score"
-    document.getElementById("multiplierAmount").innerHTML = "Your score is being multiplied by" + multiplier + "."
+    document.getElementById("multiplierAmount").innerHTML = "Your score is being multiplied by  " + multiplier + "  ."
     document.getElementById("lumberJackAmount").innerHTML = "You own " + lumberJacksOwn + " LumberJack(s)"
     document.getElementById('lumberJackCost').innerHTML = ((lumberJacksOwn+1 )* 500)
     document.getElementById("houseAmount").innerHTML = "You own " + houseOwn + " House(s)"
@@ -47,7 +47,7 @@ function add(){
 
 //submit
 function submit(){
-    window.alert("Congragulations you clicked for a total score of  " + score + " .  You had" + lumberJacksOwn + "Lumberjacks clicking" +(lumberJacksOwn * multiplier)+ "per second.  You had" + houseOwn + "Houses clicking for" +(houseOwn*10*multiplier) + " per second.  You had" + farmOwn + "farms clicking" +(farmOwn* 100  * multiplier)+ "per second .  You had" + blacksmithOwn + "Blacksmiths clicking" +(blacksmithOwn* 1000 * multiplier)+ "per second.  You had" + sawmillOwn + " Sawmills clicking for" + (sawmillOwn*5000*multiplier) + "per second.  You had" + wizardTowerOwn + " Wizard Towers clicking for" + (wizardTowerOwn*10000*multiplier) + "per second.  I hope you enjoyed this Idle Clicking game in the future you will be able to compare you score with the high score of other players!"  )
+    window.alert("Congragulations you clicked for a total score of  " + score + " .  You had" + lumberJacksOwn + "Lumberjacks clicking" +(lumberJacksOwn * multiplier)+ "per second.  You had  " + houseOwn + "  Houses clicking for  "  +(houseOwn*10*multiplier) + "   per second.  You had  " + farmOwn + "  farms clicking  " +(farmOwn* 100  * multiplier)+ "   per second .  You had   " + blacksmithOwn + "Blacksmiths clicking   " +(blacksmithOwn* 1000 * multiplier)+ "   per second.  You had   " + sawmillOwn + "    Sawmills clicking for   " + (sawmillOwn*5000*multiplier) + "   per second.  You had   " + wizardTowerOwn + "    Wizard Towers clicking for   " + (wizardTowerOwn*10000*multiplier) + "   per second.  I hope you enjoyed this Idle Clicking game in the future you will be able to compare you score with the high score of other players!"  )
     autoClick = 0
     perClick = 1
     multiplier = 1
