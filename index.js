@@ -1,19 +1,22 @@
-let score = 0;
+let score = 7500000;
 let autoClick = 0;
 let perClick = 1;
+let multiplier = 1
 let lumberJacksOwn = 0;
 let houseOwn = 0;
 let farmOwn = 0;
 let blacksmithOwn = 0;
 let sawmillOwn = 0;
 let wizardTowerOwn = 0;
+
 let upgradeInventory = document.getElementsByClassName('upgrades')
 
 //update scoreboard and upgrade menu every second
 function update(){
     document.getElementById("score").value= score;
-    document.getElementById('clicksPerSecond').value = autoClick
-    document.getElementById('clickAmount').innerHTML = "You are clicking for  " + perClick + "  score"
+    document.getElementById('clicksPerSecond').value = autoClick * multiplier
+    document.getElementById('clickAmount').innerHTML = "You are clicking for  " + perClick * multiplier + "  score"
+    document.getElementById("multiplierAmount").innerHTML = "Your score is being multiplied by" + multiplier + "."
     document.getElementById("lumberJackAmount").innerHTML = "You own " + lumberJacksOwn + " LumberJack(s)"
     document.getElementById('lumberJackCost').innerHTML = ((lumberJacksOwn+1 )* 500)
     document.getElementById("houseAmount").innerHTML = "You own " + houseOwn + " House(s)"
@@ -30,7 +33,7 @@ function update(){
 
 }
 function timer(){
-    score = score + autoClick;
+    score = score + (autoClick * multiplier) ;
     update()
 }
 
@@ -39,7 +42,7 @@ setInterval(timer,1000)
 
 //main score function
 function add(){
-    score = score + perClick
+    score = score + perClick * multiplier;
     update()    
 }
 
@@ -51,6 +54,7 @@ function save(){
     localStorage.setItem("score", score);
     localStorage.setItem("autoClick", autoClick);
     localStorage.setItem("perClick", perClick);
+    localStorage.setItem("multiplier", multiplier);
     localStorage.setItem("lumberJackAmount", lumberJacksOwn);
     localStorage.setItem("houseAmount", houseOwn);
     localStorage.setItem("farmAmount", farmOwn);
@@ -69,6 +73,8 @@ function load(){
     autoClick = parseInt(autoClick);
     perClick = localStorage.getItem("perClick");
     perClick = parseInt(perClick);
+    multiplier= localStorage.getItem("multiplier");
+    multiplier= parseInt(multiplier);
     lumberJacksOwn = localStorage.getItem("lumberJackAmount");
     lumberJacksOwn = parseInt(lumberJacksOwn);
     houseOwn = localStorage.getItem("houseAmount");
@@ -87,9 +93,20 @@ function load(){
 
  
 //clicking functions and autoclicking functions
+function buyMultipler(){
+    if(score >= 250000){
+    multiplier = multiplier + 1;
+    score = score - 250000
+    let multiplierupgrade = document.getElementById("multiplier")
+    multiplierupgrade.style.display = 'inline';
+    let MultiplerButtton = document.getElementById('MultiplerButtton')
+    MultiplerButtton.style.display= 'none';
+    update();
+    }
+}
 function buyIronAxe(){
     if(score >= 100){
-        perClick = 10;
+        perClick = (10 * multiplier);
         score = score - 100;
         let ironAxe = document.getElementById('ironAxeUpgrade')
         ironAxe.style.display = 'block';
@@ -103,7 +120,7 @@ function buyIronAxe(){
 
 function buyStoneAxe(){
     if(score >= 1000){
-        perClick = 50;
+        perClick = (50 * multiplier);
         score = score - 1000
         let ironAxe = document.getElementById('ironAxeUpgrade')
         ironAxe.style.display = 'none';
@@ -119,7 +136,7 @@ function buyStoneAxe(){
 
 function buyDoubleAxe(){
     if(score >= 10000){
-        perClick = 100;
+        perClick = (100 * multiplier);
         score = score - 10000
         let stoneAxe = document.getElementById('stoneAxeUpgrade')
         stoneAxe.style.display = 'none';
@@ -135,7 +152,7 @@ function buyDoubleAxe(){
 
 function buyGoldAxe(){
     if(score >= 100000){
-        perClick = 500;
+        perClick = (500 * multiplier);
         score = score - 100000
         let doubleAxe = document.getElementById('doubleAxeUpgrade')
         doubleAxe.style.display = 'none';
@@ -150,7 +167,7 @@ function buyGoldAxe(){
 }
 function buyHolyAxe(){
     if(score >= 500000){
-       perClick = 1000;
+       perClick = (1000 * multiplier);
        score = score - 500000
        let goldAxe = document.getElementById('goldAxeUpgrade')
        goldAxe.style.display = 'none';
@@ -165,7 +182,7 @@ function buyHolyAxe(){
 }
 function buyPaulAxe(){
     if(score >= 10000000){
-        perClick = 10000;
+        perClick = 10000 * multiplier;
         score = score - 10000000
         let holyAxe = document.getElementById('holyAxeUpgrade')
         holyAxe.style.display = 'none';
@@ -180,7 +197,7 @@ function buyPaulAxe(){
 function buyLumberjack(){
     if(score >= 500 * ((lumberJacksOwn+1))){
         score = score - (500 *((lumberJacksOwn +1)))  ;
-        autoClick = autoClick + 1;
+        autoClick = (autoClick + 1) * multiplier ;
         lumberJacksOwn = lumberJacksOwn + 1
         let lumberJack = document.getElementById('lumberjack')
         lumberJack.style.display = 'inline';
@@ -191,7 +208,7 @@ function buyLumberjack(){
 function buyHouse(){
     if(score >= 5000 * ((houseOwn+1))){
         score = score - (5000 *((houseOwn +1)))  ;
-        autoClick = autoClick + 10;
+        autoClick = (autoClick + 10) * multiplier;
         houseOwn = houseOwn + 1
         let house = document.getElementById('house')
         house.style.display = 'inline';
@@ -201,17 +218,19 @@ function buyHouse(){
 function buyFarm(){
     if(score >= 50000 * ((farmOwn+1))){
         score = score - (50000 *((farmOwn +1)))  ;
-        autoClick = autoClick + 100;
+        autoClick = (autoClick + 100) * multiplier;
         farmOwn = farmOwn + 1
         let farm = document.getElementById('farm')
         farm.style.display = 'inline';
+        let MultiplerButtton = document.getElementById('MultiplerButtton')
+        MultiplerButtton.style.display = "inline"
         update()
     }     
 }
 function buyBlacksmith(){
     if(score >= 5000000 * ((blacksmithOwn+1))){
         score = score - (5000000 *((blacksmithOwn +1)))  ;
-        autoClick = autoClick + 1000;
+        autoClick = (autoClick + 1000) * multiplier;
         blacksmithOwn = blacksmithOwn + 1
         let blackSmith = document.getElementById('blacksmith')
         blackSmith.style.display = 'inline';
@@ -221,7 +240,7 @@ function buyBlacksmith(){
 function buySawmill(){
     if(score >= 10000000 * ((sawmillOwn+1))){
         score = score - (10000000 *((sawmillOwn +1)))  ;
-        autoClick = autoClick + 5000;
+        autoClick = (autoClick + 5000) * multiplier;
         sawmillOwn = sawmillOwn + 1
         let sawMill = document.getElementById('sawmill')
         sawMill.style.display = 'inline';
@@ -231,7 +250,7 @@ function buySawmill(){
 function buyWizard(){
     if(score >= 1000000000 * ((wizardTowerOwn+1))){
         score = score - (1000000000 *((wizardTowerOwn +1)))  ;
-        autoClick = autoClick + 10000;
+        autoClick = (autoClick + 10000) * multiplier;
         wizardTowerOwn = wizardTowerOwn + 1
         let wizard = document.getElementById('wizard')
         wizard.style.display = 'inline';
