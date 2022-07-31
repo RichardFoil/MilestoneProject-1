@@ -19,3 +19,7 @@ The submit button should relay what your total score was!
 (I want to add more flavor to the game by having random characters walk around or have some sort of tangible story line)
 (I want to find better art for the upgrades so that the whole game feels more cohesive.)
 (I cant figure out how to save the image of the lumberjack, house, farm etc. so that it loads when a player hits the load button when coming back to the game.)
+
+
+
+Background art by: (Krishna Palacio)
