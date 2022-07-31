@@ -22,9 +22,11 @@
                 <div class="scoreboard">
                     <p id="totalscore"> 
                         Score: 
+                        <br>
                         <input type="text" id="score">
                         <br>
-                        Clicks Per Second:
+                        Autoclicks Per Second:
+                        <br>
                         <input type="text" id="clicksPerSecond">
                     </p>
                                        
@@ -40,7 +42,7 @@
                         Load
                         </button>
                 </div>
-                <div class = "buildings">
+                <div id = "buildings">
                     <img id="lumberjack" src="./assets/clip art/lumberjack.png" alt="lumberjack">
                     <img id="house" src="./assets/clip art/house (2).png" alt="house ">
                     <img id="farm" src="./assets/clip art/farm (2).png" alt="farm">
@@ -49,6 +51,7 @@
                     <img id="wizard" src="./assets/clip art/wizard tower.png" alt="wizard tower">
 
                 </div>
+                <div id="emptybuilding"> <img src="" id="loadbuildings"> </div>
 
                 <button  id="points" onclick="add()">
                     <img id="tree" src="./assets/clip art/tree.png" alt="Big clicking tree">

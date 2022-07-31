@@ -158,10 +158,7 @@ body{
  #paulAxeButtonShop{
     display: none;
  }
- #MultiplerButtton{
-    display: none;
- }
-
+ 
 /* code from https://www.w3schools.com/howto/howto_js_alert.asp */
  .alert {
     position: fixed;
