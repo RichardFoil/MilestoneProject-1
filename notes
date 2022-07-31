@@ -1,16 +1,13 @@
-This is a clicker game!
+This is an idle clicker game!
+Have fun!
 
 ToDo list:
+make a figure/player
+make presteige button 
+make make game more rpg like with choices and different upgrade paths
+match character art and upgrade art with background better
+clean up overall look 
+make store and upgrades closeable menus
 
-make a figure/player /nope
-make an eventlistener to click //done! 
-whenever the user clicks they should score a point // done!
-keep tract of the player points in a score section // done! 
-
-create a shop // kinda 
-spend points on upgrades from the shop /done
-
-
-
-art by (Krishna Palacio)
+background art by: (Krishna Palacio)
 
