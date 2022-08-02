@@ -1,4 +1,4 @@
-let score = 0;
+let score = 999999990;
 let autoClick = 0;
 let perClick = 1;
 let multiplier = 1
@@ -23,11 +23,11 @@ function update(){
     document.getElementById("farmAmount").innerHTML = "You own " + farmOwn + " Farm(s)"
     document.getElementById('farmCost').innerHTML = ((farmOwn+1 )* 50000)
     document.getElementById("blacksmithAmount").innerHTML = "You own " + blacksmithOwn + " Blacksmith(s)"
-    document.getElementById('blackSmithCost').innerHTML = ((blacksmithOwn+1 )* 5000000)
+    document.getElementById('blackSmithCost').innerHTML = ((blacksmithOwn+1 )* 500000)
     document.getElementById("sawmillAmount").innerHTML = "You own " + sawmillOwn + " Sawmill(s)"
     document.getElementById('sawmillCost').innerHTML = ((sawmillOwn+1 )* 10000000)
     document.getElementById("wizardTowerAmount").innerHTML = "You own " + wizardTowerOwn + " Wizard Tower(s)"
-    document.getElementById('wizardCost').innerHTML = ((wizardTowerOwn+1 )* 1000000000)
+    document.getElementById('wizardCost').innerHTML = ((wizardTowerOwn+1 )* 100000000)
        
 
 }
@@ -235,8 +235,8 @@ function buyFarm(){
     }     
 }
 function buyBlacksmith(){
-    if(score >= 5000000 * ((blacksmithOwn+1))){
-        score = score - (5000000 *((blacksmithOwn +1)))  ;
+    if(score >= 500000 * ((blacksmithOwn+1))){
+        score = score - (500000 *((blacksmithOwn +1)))  ;
         autoClick = (autoClick + 1000);
         blacksmithOwn = blacksmithOwn + 1
         let blackSmith = document.getElementById('blacksmith')
@@ -255,8 +255,8 @@ function buySawmill(){
     }    
 }
 function buyWizard(){
-    if(score >= 1000000000 * ((wizardTowerOwn+1))){
-        score = score - (1000000000 *((wizardTowerOwn +1)))  ;
+    if(score >= 100000000 * ((wizardTowerOwn+1))){
+        score = score - (100000000 *((wizardTowerOwn +1)))  ;
         autoClick = (autoClick + 10000);
         wizardTowerOwn = wizardTowerOwn + 1
         let wizard = document.getElementById('wizard')
