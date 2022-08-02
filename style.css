@@ -8,13 +8,15 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border: 2px Solid black;
+    border: 5px inset gold;
     position: fixed;
-    right: 0;
+    right: 45%;
     top: 0;
     background-color: white;
     opacity: .8;
-
+    color: black;
+    font-family: Garamond, serif;
+    font-weight: bolder;
         
     
 }
@@ -32,13 +34,17 @@ body{
     left: 20%;
     top: 88%;
     color: white;
-    
+    font-weight: bolder;
+    font-family: Garamond, serif;
 }
 
 
 .shopitem{
     background-color: white;
     opacity: .8;
+    font-family: Garamond, serif;
+    font-weight: bold;
+    border: 2px inset gold;
     
 }
 /* big ass tree*/
@@ -57,15 +63,16 @@ body{
 .upgrades{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 5px inset gold;
     width: 10%;
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
     background-color: white;
     opacity: .8;
-    
-
+    color: black;
+    font-weight: bolder;
+    font-family: Garamond, serif;
 }
 .upgradeInventory{
     display: none;
@@ -89,8 +96,8 @@ body{
     width: 50px;
 }
 .clicker{
-    height: 50px;
-    width: 50px;
+    height: 20px;
+    width: 20px;
 }
 
 #lumberjack{
@@ -101,7 +108,7 @@ body{
     display: none;
 }
 #house{
-   transform: scale(.3);
+   transform: scale(.4);
    position: fixed;
    left: 50%;
    bottom: 43%;
@@ -139,8 +146,8 @@ body{
 
  #sound{
     position: fixed;
-    left: 10%;
-    width: 8%;
+    left: 0;
+    width: 9%;
     height: 3%;
  }
  #stoneAxeButtonShop{
@@ -167,12 +174,13 @@ body{
     background-color: white;
     opacity: .9;
     color: black;
-    border: 5px solid black;
+    border: 5px inset gold;
+    font-family: Garamond, serif;
 
   }
   
   .closebtn {
-    border: 2px solid black;
+    border: 5px solid red;
     margin-left: 15px;
     color: black;
     font-weight: bold;
