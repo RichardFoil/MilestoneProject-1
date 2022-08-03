@@ -1,4 +1,4 @@
-let score = 999999990;
+let score = 0;
 let autoClick = 0;
 let perClick = 1;
 let multiplier = 1
